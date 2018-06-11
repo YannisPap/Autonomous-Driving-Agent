@@ -1,12 +1,16 @@
+### Reinforcement Learning
 # Application of Reinforcement Learning on Autonomous Driving Agents
 
 -----
 
-## Scope
-
 ![autonomus_taxi](images/googles-self-driving-car.png)
 
-In this project, we work towards constructing an optimized Q-Learning driving agent that navigates a *Smartcab* through its environment towards a goal. Since the *Smartcab* is expected to drive passengers from one location to another, the driving agent is evaluated on two fundamental metrics: **Safety** and **Reliability**. A driving agent that gets the *Smartcab* to its destination while running red lights or narrowly avoiding accidents would be considered **unsafe**. Similarly, a driving agent that frequently fails to reach the destination in time would be considered **unreliable**. Maximizing the driving agent's **safety** and **reliability** would ensure that *Smartcabs* have a permanent place in the transportation industry.
+## Overview
+
+
+In this project, we apply reinforcement learning techniques for a self-driving agent in a simplified world to aid it in effectively reaching its destinations in the allotted time. We first investigate the environment the agent operates in by constructing a basic driving implementation. Once the agent is successful at operating within the environment, we then identify each possible state the agent can be in when considering such things as traffic lights and oncoming traffic at each intersection. With states identified, we then implement a Q-Learning algorithm for the self-driving agent to guide the agent towards its destination within the allotted time. Finally, we improve upon the Q-Learning algorithm to find the best configuration of learning and exploration factors to ensure the self-driving agent is reaching its destinations with consistently positive results.
+
+Since the *Smartcab* is expected to drive passengers from one location to another, the driving agent is evaluated on two fundamental metrics: **Safety** and **Reliability**. A driving agent that gets the *Smartcab* to its destination while running red lights or narrowly avoiding accidents would be considered **unsafe**. Similarly, a driving agent that frequently fails to reach the destination in time would be considered **unreliable**. Maximizing the driving agent's **safety** and **reliability** would ensure that *Smartcabs* have a permanent place in the transportation industry.
 
 **Safety** and **Reliability** are measured using a letter-grade system as follows:
 
@@ -18,6 +22,12 @@ In this project, we work towards constructing an optimized Q-Learning driving ag
 |   C   	|  Agent commits at least one major traffic violation,<br/> such as driving through a red light. | Agent reaches the destination on time<br />for at least 70% of trips. |
 |   D   	| Agent causes at least one minor accident,<br/> such as turning left on green with oncoming traffic.       	| Agent reaches the destination on time<br />for at least 60% of trips. |
 |   F   	|  Agent causes at least one major accident,<br />such as driving through a red light with cross-traffic.      	| Agent fails to reach the destination on time<br />for at least 60% of trips. |
+
+-----
+
+## Description  
+
+In the not-so-distant future, taxicab companies across the United States no longer employ human drivers to operate their fleet of vehicles. Instead, the taxicabs are operated by self-driving agents, known as smartcabs, to transport people from one location to another within the cities those companies operate. In major metropolitan areas, such as Chicago, New York City, and San Francisco, an increasing number of people have come to depend on smartcabs to get to where they need to go as safely and reliably as possible. Although smartcabs have become the transport of choice, concerns have arisen that a self-driving agent might not be as safe or reliable as human drivers, particularly when considering city traffic lights and other vehicles. To alleviate these concerns, our task is to use reinforcement learning techniques to construct a demonstration of a smartcab operating in real-time to prove that both safety and reliability can be achieved.
 
 -----
 
@@ -37,9 +47,8 @@ Trying different parameters we achieved the best results with a learning rate of
 
 ![results](images/results.png)
 
-
 -----
 
 #### Notes
 - Adapted from a reinforcement learning assignement during my study for Udacity's [Machine Learning Engineer NanoDegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t)  
-- Template code provided by Udacity and can be found on [this](https://github.com/udacity/machine-learning/tree/master/projects/smartcab) GitHub repository.
+- The template and helper code provided by Udacity and can be found on [this](https://github.com/udacity/machine-learning/tree/master/projects/smartcab) GitHub repository.
